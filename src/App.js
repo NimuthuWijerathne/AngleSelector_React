@@ -1,12 +1,11 @@
 import './App.css';
-import React from 'react';
-import useState from 'react';
+import React, { useState } from 'react';
 
 function App() {
     const [angle, setAngle] = useState(0);
 
     const handleInputChange = (e) => {
-        let value = parseInt(e.target.value);
+        let value = parseInt(e.target.value, 10);
         if (isNaN(value)) value = 0;
         if (value < 0) value = 0;
         if (value > 360) value = 360;
@@ -14,7 +13,7 @@ function App() {
     };
 
     const handleSliderChange = (e) => {
-        setAngle(e.target.value);
+        setAngle(Number(e.target.value));
     };
 
     const handleRadioChange = (value) => {
@@ -58,5 +57,3 @@ function App() {
 }
 
 export default App;
-
-
