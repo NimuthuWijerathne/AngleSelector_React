@@ -46,7 +46,7 @@ function App() {
                             type="radio"
                             name="angle"
                             value={val}
-                            checked={angle == val}
+                            checked={angle === val}
                             onChange={() => handleRadioChange(val)}
                         />
                         {val}
